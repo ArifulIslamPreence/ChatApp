@@ -12,20 +12,6 @@ avoid polling.
 
 ## Scaling ##
 
-### Requests ###
-"Because Channels takes Django into a multi-process model, you no longer run 
-everything in one process along with a WSGI server (of course, you’re still 
-free to do that if you don’t want to use Channels). Instead, you run one or 
-more interface servers, and one or more worker servers, connected by that 
-channel layer you configured earlier."
-
-In this case, I'm using the In-Memory channel system, but could be changed to
-the Redis backend to improve performance and spawn multiple workers in a
-distributed environment.
-
-Please take a look at the link below for more information:
-https://channels.readthedocs.io/en/latest/introduction.html
-
 
 **update 04/06/19**
 
