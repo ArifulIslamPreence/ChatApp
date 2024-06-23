@@ -10,14 +10,6 @@ avoid polling.
 - When a user sends a message, the frontend makes a POST request to the REST API, which then saves the message in Django and notifies the relevant users via the WebSocket connection with the new message ID.
 - When the frontend gets a new message notification with the message ID, it sends a GET request to the API to retrieve the message
 
-## Scaling ##
-
-
-**update 04/06/19**
-
-- using pipenv for package management
-- move to Channels 2
-- use redis as the channel layer backing store. for more information, please check [channels_redis](https://github.com/django/channels_redis)
 
 ### Database ###
 For this demo, I'm using a simple MySQL setup. If more performance is required, 
